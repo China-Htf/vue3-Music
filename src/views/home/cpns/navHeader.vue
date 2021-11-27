@@ -51,8 +51,8 @@
                 </el-button>
                 <template #dropdown>
                   <el-dropdown-menu>
-                    <el-dropdown-item>开通绿钻豪华包</el-dropdown-item> 
-                    <el-dropdown-item divided>开通会员包</el-dropdown-item>
+                    <el-dropdown-item @click="openMoney">开通绿钻豪华包</el-dropdown-item> 
+                    <el-dropdown-item @click="openMoney" divided>开通会员包</el-dropdown-item>
                   </el-dropdown-menu>
                 </template>
             </el-dropdown>
@@ -64,8 +64,8 @@
                 </el-button>
                 <template #dropdown>
                   <el-dropdown-menu>
-                    <el-dropdown-item>购买乐币</el-dropdown-item> 
-                    <el-dropdown-item divided>充值饭票</el-dropdown-item>
+                    <el-dropdown-item @click="openMoney">购买乐币</el-dropdown-item> 
+                    <el-dropdown-item @click="openMoney" divided>充值饭票</el-dropdown-item>
                   </el-dropdown-menu>
                 </template>
             </el-dropdown>
@@ -107,6 +107,8 @@
 import { ref, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+import { ElMessage } from 'element-plus'
+import 'element-plus/theme-chalk/el-message.css'
 import { ArrowDown } from '@element-plus/icons'
 // 手机登录
 import loginPhone from './loginPhone.vue'
@@ -164,6 +166,14 @@ const userInfo = computed(() => {
 const navHeaderLoginOut = () => {
   store.dispatch('loginModule/phoneLoginOut')
   router.push('/home/pavilion/pavilionhome')
+}
+// 花钱的地方
+const openMoney = () => {
+  ElMessage({
+    message: '宝，咱不花钱好嘛~',
+    type: 'warning',
+    center: true,
+  })
 }
 
 </script>
