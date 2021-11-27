@@ -7,12 +7,20 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@element-plus/icons": "0.0.11",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "element-plus": "^1.2.0-beta.3",
+    "js-cookie": "^3.0.1",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1",
+    "unplugin-vue-components": "^0.17.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.1",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
