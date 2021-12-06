@@ -10,6 +10,7 @@ document.addEventListener('visibilitychange', function () {
 if (document.visibilityState == 'hidden') {
   document.title = '(つェ⊂)我藏好了哦~ ';
 }else {
+  // document.title = '抑云音乐'
   document.title = '抑云音乐'
 }
 });
