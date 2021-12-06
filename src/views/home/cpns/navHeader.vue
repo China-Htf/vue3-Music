@@ -9,7 +9,7 @@
             <el-image :src="require('@/assets/img/logo.png')"></el-image>
           </el-col>
           <!-- 头部导航 -->
-          <el-col :span="8" class="navHeaderTitle">
+          <el-col :span="9" class="navHeaderTitle">
             <template v-for="(item, i) in navHeadertitles" :key="i">
               <router-link 
                 class="navHeaderTitleSize"
@@ -154,7 +154,8 @@ navHeaderURL()
 
 // 登录
 const handleLoginClick = () => {
-  phoneRef.value?.phoneLoginAction()  
+  phoneRef.value?.phoneLoginAction()
+  navDialogVisible.value = false  
 }
 
 // 用户信息

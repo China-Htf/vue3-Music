@@ -27,5 +27,4 @@ import navHeader from './cpns/navHeader.vue'
     }
   }
 }
-
 </style>

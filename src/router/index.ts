@@ -13,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/home/Home.vue'),
     meta: {title: 'ceshi'},
     children: homeChildren
+  },
+  {
+    path: '/player',
+    name: 'Player',
+    component: () => import('@/views/player/player.vue')
   }
 ]
 

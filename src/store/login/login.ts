@@ -46,6 +46,10 @@ const loginModule: Module<ILoginState, IRootState> = {
       // 存取cookie
       const cookie = loginResult.cookie
       Cookies.set('music',cookie )
+
+      // const aa = await requestAccountInfo()
+      // console.log(aa);
+      
       
     },
     phoneLoginOut({commit}) {

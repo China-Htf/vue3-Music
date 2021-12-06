@@ -2,8 +2,10 @@ import TFRequest from './request'
 import localCache from '@/utils/cache'
 import { getTimeStamp } from '@/utils/auth'
 import store from '@/store'
+// import Cookies from 'js-cookie'
 
 const TimeOuts = 300000
+// const cookie = Cookies.get('music')
 
 const tfRequest = new TFRequest({
   /**
@@ -13,6 +15,7 @@ const tfRequest = new TFRequest({
    */
   baseURL: process.env.VUE_APP_BASE_URL,
   timeout: 5000,
+  // withCredentials: true,
   interceptors: {
     requestInterceptor: (config) => {
       // const cookie = localCache.get('cookie')
@@ -28,6 +31,7 @@ const tfRequest = new TFRequest({
         }
         // const token = localCache.get('token')
         // config.headers!.Authorization = `${token}`
+        // config.headers!['Set-Cookie'] = `SameSite=None`
       }
       console.log('实例请求成功的拦截');
       return config
